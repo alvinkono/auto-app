@@ -1,1 +1,36 @@
-<html><body></body></html>
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Calculator App</title>
+  <style>
+    body { font-family: Arial; text-align: center; margin-top: 50px; }
+    input, button { font-size: 20px; margin: 5px; padding: 10px; }
+  </style>
+</head>
+<body>
+
+<h2>Calculator</h2>
+
+<input id="a" placeholder="Number 1">
+<input id="b" placeholder="Number 2">
+<br>
+
+<button onclick="add()">+</button>
+<button onclick="sub()">-</button>
+<button onclick="mul()">*</button>
+<button onclick="div()">/</button>
+
+<h3 id="result">Result: </h3>
+
+<script>
+function getA(){ return parseFloat(document.getElementById("a").value); }
+function getB(){ return parseFloat(document.getElementById("b").value); }
+
+function add(){ document.getElementById("result").innerText = getA() + getB(); }
+function sub(){ document.getElementById("result").innerText = getA() - getB(); }
+function mul(){ document.getElementById("result").innerText = getA() * getB(); }
+function div(){ document.getElementById("result").innerText = getA() / getB(); }
+</script>
+
+</body>
+</html>
