@@ -4,7 +4,11 @@ echo "🚀 Starting Auto Deploy..."
 
 git add .
 git commit -m "auto deploy update $(date)"
-git push origin main
+
+# Ensure correct branch
+git branch -M main
+
+git push -u origin main
 
 echo "✅ Code pushed to GitHub"
-echo "⚙️ If GitHub Actions enabled, build will start automatically"
+echo "⚙️ GitHub Actions will trigger build automatically"
